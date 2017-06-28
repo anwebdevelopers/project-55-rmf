@@ -1,0 +1,120 @@
+.program {
+    @extend .section;
+    background-image: url(../img/mask-program.png);
+}
+.program__container {
+    @extend .container;
+}
+.program__title {
+    @extend .title;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -15%;
+        left: calc(50% - 15vw);
+        transform: skew(40deg);
+        z-index: -1;
+        width: 1.5rem;
+        height: 130%;
+        background-image: linear-gradient(40deg, $red, $yellow);
+    }
+}
+.program__box {
+    margin: 8rem 6rem 0 6rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.program__item {
+    flex: 0 0 auto;
+    width: calc(50% - 6rem);
+    margin: 0 3rem 5rem 3rem;
+}
+.program__item-title {
+    margin: 0;
+    text-align: center;
+    color: $yellow;
+    font-weight: 800;
+    span {
+        display: block;
+        font-size: 4rem;
+    }
+}
+@supports ((-webkit-text-fill-color: transparent) or (text-fill-color: transparent)) {
+    .program__item-title {
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to right, $yellow, $red);
+        span {
+            -webkit-text-fill-color: inherit;
+            -webkit-background-clip: inherit;
+            background-image: inherit;
+        }
+    }
+    .program__item {
+        &:nth-child(even) {
+            .program__item-title {
+                background-image: linear-gradient(to right, $red, $purple);
+            }
+        }
+    }
+}
+.program__item-list {
+    list-style: none;
+
+    margin: 3rem 0 0 0;
+    padding: 2rem 0 0 0;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    column-count: 2;
+    column-gap: 2rem;
+    li {
+        position: relative;
+        margin: 2rem 0 0 0;
+        &:first-child {
+            margin-top: 0;
+        }
+        padding: 0 0 0 2.5rem;
+        background-image: linear-gradient(rgba(255, 255, 255, .5),rgba(255, 255, 255, .5));
+        background-size: 1.5rem 1px;
+        background-position: 0 1rem;
+        background-repeat: no-repeat;
+    }
+}
+.program__button {
+    text-align: center;
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 960px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .program__box {
+        margin: 8rem 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+    .program__box {
+        display: block;
+    }
+    .program__item {
+        width: auto;
+    }
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+    .program__item-list {
+        columns: auto;
+    }
+}

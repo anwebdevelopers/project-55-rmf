@@ -1,0 +1,178 @@
+@import "bourbon";
+@import "components/vars.scss";
+@import "components/normalize.scss";
+@import "components/fonts.scss";
+
+*:focus::-webkit-input-placeholder {color: transparent}
+*:focus::-moz-placeholder          {color: transparent}
+*:focus:-moz-placeholder           {color: transparent}
+*:focus:-ms-input-placeholder      {color: transparent}
+
+*::-webkit-input-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: #fff;
+}
+body input:required:valid,
+body textarea:required:valid {
+	color: #fff;
+}
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	font-size: 10px;
+}
+body {
+	position: relative;
+	min-width: 320px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.8rem;
+	line-height: 1.25;
+	font-weight: 300;
+	letter-spacing: .05em;
+	font-family: 'Uni Neue', sans-serif;
+	color: #fff;
+	background-color: #000;
+	overflow-x: hidden;
+}
+.section {
+	padding: 8rem 0;
+	background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.title {
+	position: relative;
+	margin: 0;
+	font-size: 8rem;
+	font-weight: 800;
+	line-height: 1;
+	text-transform: uppercase;
+	text-align: center;
+	word-wrap: break-word;
+}
+.button {
+	@include btn;
+	position: relative;
+	z-index: 1;
+	padding: 1.2rem 3rem;
+	margin: 1rem 2rem;
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $red;
+		transform: skew(40deg);
+		transition: all .5s ease;
+	}
+	&:hover, &:active {
+		&:before {
+			background-color: $yellow;
+		}
+	}
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+a {
+	outline: none !important;
+}
+
+
+@media only screen and (max-width : 1200px) {
+	html {
+		font-size: 9px;
+	}
+	.title {
+		font-size: 7rem;
+	}
+}
+
+@media only screen and (max-width : 960px) {
+	html {
+		font-size: 8px;
+	}
+	.title {
+		font-size: 6rem;
+	}
+}
+
+@media only screen and (max-width : 768px) {
+	html {
+		font-size: 7px;
+	}
+	.title {
+		font-size: 5rem;
+	}
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}
+
+//Custom Styles Here
+@import "components/header.scss";
+@import "components/program.scss";
+@import "components/activities.scss";
+
+//@import "build/scss/components/magnific-popup.scss";
+
+//ALWAYS END
+//@import "components/media.scss";
+
+//Load Libs SASS
+//@import "html/libs/animate/animate.sass";
+//@import "html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min";
+//@import "html/libs/superfish/dist/css/superfish";
+//@import "html/libs/font-awesome/scss/font-awesome.scss";
+//@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
+//@import "html/libs/magnific-popup/dist/magnific-popup";

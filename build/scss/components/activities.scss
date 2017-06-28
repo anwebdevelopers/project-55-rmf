@@ -1,0 +1,107 @@
+ .activities {
+    @extend .section;
+    background-image: url(../img/mask-activities.png);
+}
+.activities__container {
+    @extend .container;
+}
+.activities__title {
+    @extend .title;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) skew(40deg);
+        z-index: -1;
+        width: 26vw;
+        height: 10rem;
+        background-image: linear-gradient(to bottom, $yellow, $red), linear-gradient(to bottom, $red, $yellow);
+        background-position: 0 20%, 100% 0;
+        background-size: 1.5rem 50%, 1.5rem 100%;;
+        background-repeat: no-repeat;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -10%;
+        left: calc(50% + 12vw);
+        transform: skew(40deg);
+        z-index: 1;
+        width: 1.5rem;
+        height: 40%;
+        background-image: linear-gradient(to bottom, $red, $purple);
+    }
+}
+.activities__box {
+    padding: 0;
+    list-style: none;
+    margin: 8rem 6rem 0 6rem;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.activities__item {
+    flex: 0 0 auto;
+    width: calc(33.33% - 6rem);
+    margin: 0 3rem 5rem 3rem;
+    text-align: center;
+}
+.activities__item-icon {
+    margin: 0;
+    height: 11rem;
+    line-height: 11rem;
+    img {
+        vertical-align: bottom;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.activities__item-title {
+    margin: 2rem 0 0 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+.activities__item-text {
+    margin: 2rem 0 0 0;
+}
+.activities__item-button {
+    margin: 10rem 0 0 0;
+}
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 960px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .activities__box {
+        margin: 8rem 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+    .activities__item {
+        width: calc(50% - 4rem);
+        margin: 0 2rem 5rem 2rem
+    }
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+    .activities__box {
+        display: block;
+    }
+    .activities__item {
+        width: auto;
+    }
+}
