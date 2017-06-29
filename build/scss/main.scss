@@ -79,6 +79,30 @@ body {
 	text-align: center;
 	word-wrap: break-word;
 }
+.subtitle {
+	position: relative;
+	margin: 8rem 0 0 0;
+	&:first-child {
+		margin-top: 0;
+	}
+	padding: 0 0 2rem 0;
+	font-size: 2.4rem;
+	font-weight: 800;
+	line-height: 1;
+	text-transform: uppercase;
+	text-align: center;
+	word-wrap: break-word;
+	background-image: linear-gradient(rgba(255, 255, 255, .5),rgba(255, 255, 255, .5));
+	background-size: 7rem 1px;
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+}
+.text {
+	@extend .text;
+	margin: 2rem auto 0 auto;
+	max-width: 52rem;
+	text-align: center;
+}
 .button {
 	@include btn;
 	position: relative;
@@ -163,6 +187,8 @@ a {
 @import "components/header.scss";
 @import "components/program.scss";
 @import "components/activities.scss";
+@import "components/keys.scss";
+@import "components/show.scss";
 
 //@import "build/scss/components/magnific-popup.scss";
 
@@ -171,7 +197,7 @@ a {
 
 //Load Libs SASS
 //@import "html/libs/animate/animate.sass";
-//@import "html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min";
+@import "html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min";
 //@import "html/libs/superfish/dist/css/superfish";
 //@import "html/libs/font-awesome/scss/font-awesome.scss";
 //@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";

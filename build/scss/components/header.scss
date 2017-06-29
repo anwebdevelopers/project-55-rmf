@@ -208,7 +208,7 @@
     line-height: 1;
     font-style: italic;
     color: #000;
-    text-shadow: 0 0 0 #000, 0 0 2px #fff;
+    text-shadow: 0 0 0 #000, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff;
     text-align: right;
 }
 
@@ -219,7 +219,7 @@
     font-weight: 800;
     letter-spacing: .03em;
     color: #000;
-    text-shadow: 0 0 2px $yellow;
+    text-shadow: 0 0 3px $yellow, 0 0 3px $yellow, 0 0 3px $yellow;
     text-align: right;
     word-wrap: break-word;
 }
@@ -262,7 +262,7 @@
     margin: 3rem 0 0 0;
     font-size: 3.4rem;
     font-style: italic;
-    text-shadow: 0 0 0 #fff, 0 0 2px #000;
+    text-shadow: 0 0 0 #fff, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000;
     img {
         vertical-align: middle;
         margin: 1rem;
@@ -271,6 +271,11 @@
 
 
 @media only screen and (max-width : 1200px) {
+    .header__nav {
+        &:before {
+            transform: none;
+        }
+    }
     .header__content {
         padding: 10rem 0 20rem 0;
     }
