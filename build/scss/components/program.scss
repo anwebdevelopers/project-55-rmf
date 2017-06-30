@@ -30,6 +30,12 @@
     flex: 0 0 auto;
     width: calc(50% - 6rem);
     margin: 0 3rem 5rem 3rem;
+    &:nth-child(even) {
+        animation-delay: .5s;
+        > *, &:before, &:after {
+            animation-delay: .5s;
+        }
+    }
 }
 .program__item-title {
     margin: 0;

@@ -1,0 +1,128 @@
+.footer {
+   @extend .section;
+   padding-bottom: 3rem;
+   background-image: url(../img/mask-activities.png);
+}
+.footer__container {
+   @extend .container;
+}
+.footer__title {
+   @extend .title;
+   &:before {
+       content: '';
+       position: absolute;
+       top: -10%;
+       left: 50%;
+       transform: translateX(-50%) skew(40deg);
+       z-index: -1;
+       width: 1.5rem;
+       height: 140%;
+       background-image: linear-gradient(to bottom, $red, $purple);
+       background-position: 100% 0;
+       background-size: 1.5rem 100%;
+       background-repeat: no-repeat;
+   }
+   &:after {
+       content: '';
+       position: absolute;
+       bottom: -10%;
+       left: calc(50% + 4vw);
+       transform: skew(40deg);
+       z-index: 1;
+       width: 1.5rem;
+       height: 80%;
+       background-image: linear-gradient(to bottom, $red, $yellow);
+   }
+}
+.footer__subtitle {
+    @extend .subtitle;
+}
+.footer__text {
+    @extend .text;
+}
+.footer__events {
+    margin: 8rem auto 0 auto;
+    max-width: 840px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.footer__events-item {
+    flex: 0 0 auto;
+    width: calc(25% - 4rem);
+    margin: 0 2rem 5rem 2rem;
+    text-align: center;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        transition: transform .5s ease;
+    }
+    &:hover, &:active {
+        img {
+            transform: scale(.9);
+        }
+    }
+    &:nth-child(4n-2) {
+        animation-delay: .3s;
+        > *, &:before, &:after {
+            animation-delay: .3s;
+        }
+    }
+    &:nth-child(4n-1) {
+        animation-delay: .6s;
+        > *, &:before, &:after {
+            animation-delay: .6s;
+        }
+    }
+    &:nth-child(4n) {
+        animation-delay: .9s;
+        > *, &:before, &:after {
+            animation-delay: .6s;
+        }
+    }
+}
+.footer__box {
+    margin: 15rem 0 0 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    filter: grayscale(1) brightness(.3);
+    transition: all .5s ease;
+    &:hover, &:active {
+        filter: grayscale(0) brightness(1);
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 960px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .footer__events-item {
+        width: calc(33.33% - 2rem);
+        margin: 0 1rem 5rem 1rem;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .footer__events-item {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media only screen and (max-width : 360px) {
+
+}

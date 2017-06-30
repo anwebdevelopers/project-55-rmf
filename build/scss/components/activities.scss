@@ -46,6 +46,18 @@
     width: calc(33.33% - 6rem);
     margin: 0 3rem 5rem 3rem;
     text-align: center;
+    &:nth-child(3n-1) {
+        animation-delay: .3s;
+        > *, &:before, &:after {
+            animation-delay: .3s;
+        }
+    }
+    &:nth-child(3n) {
+        animation-delay: .6s;
+        > *, &:before, &:after {
+            animation-delay: .6s;
+        }
+    }
 }
 .activities__item-icon {
     margin: 0;

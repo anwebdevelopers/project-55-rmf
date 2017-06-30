@@ -1,0 +1,124 @@
+.forum {
+   @extend .section;
+}
+.forum__container {
+   @extend .container;
+}
+.forum__title {
+   @extend .title;
+   &:before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 50%;
+       transform: translateX(-50%) skew(40deg);
+       z-index: 1;
+       width: 26vw;
+       height: 10rem;
+       background-image: linear-gradient(to bottom, $red, $yellow), linear-gradient(to bottom, $red, $purple);
+       background-position: 0 20%, 100% 0;
+       background-size: 1.5rem 100%, 1.5rem 50%;
+       background-repeat: no-repeat;
+   }
+   &:after {
+       content: '';
+       position: absolute;
+       bottom: -10%;
+       left: calc(50% + 12vw);
+       transform: skew(40deg);
+       z-index: -1;
+       width: 1.5rem;
+       height: 80%;
+       background-image: linear-gradient(to bottom, $red, $yellow);
+   }
+}
+.forum__subtitle {
+    @extend .subtitle;
+}
+.forum__text {
+    @extend .text;
+}
+.forum__img {
+    margin: 4rem 0 0 0;
+    text-align: center;
+}
+.forum__img-inner {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url(../img/mask-forum.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+.forum__content {
+    max-width: 840px;
+    margin: 4rem auto 0 auto;
+}
+.forum__content-title {
+    margin: 2rem 0 0 0;
+    text-align: center;
+    font-weight: 800;
+}
+.forum__content-list {
+    margin: 3rem 0 0 0;
+    padding: 0;
+    list-style: none;
+    column-count: 2;
+    column-gap: 2rem;
+    li {
+        break-inside: avoid;
+        position: relative;
+        margin: 1.5rem 0 0 0;
+        &:first-child {
+            margin-top: 0;
+        }
+        padding: 0 0 0 2.5rem;
+        background-image: linear-gradient(rgba(255, 255, 255, .5),rgba(255, 255, 255, .5));
+        background-size: 1.5rem 1px;
+        background-position: 0 1rem;
+        background-repeat: no-repeat;
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 960px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+    .forum__content-list {
+        columns: auto;
+    }
+}

@@ -1,0 +1,119 @@
+.route {
+   @extend .section;
+}
+.route__container {
+   @extend .container;
+}
+.route__title {
+   @extend .title;
+   &:before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 50%;
+       transform: translateX(-50%) skew(40deg);
+       z-index: -1;
+       width: 26vw;
+       height: 10rem;
+       background-image: linear-gradient(to bottom, $red, $purple), linear-gradient(to bottom, $red, $yellow);
+       background-position: 0 20%, 100% 0;
+       background-size: 1.5rem 100%, 1.5rem 50%;
+       background-repeat: no-repeat;
+   }
+   &:after {
+       content: '';
+       position: absolute;
+       bottom: -10%;
+       left: calc(50% - 8vw);
+       transform: skew(40deg);
+       z-index: 1;
+       width: 1.5rem;
+       height: 80%;
+       background-image: linear-gradient(to bottom, $red, $yellow);
+   }
+}
+.route__subtitle {
+    @extend .subtitle;
+}
+.route__text {
+    @extend .text;
+}
+.route__tabs {
+    position: relative;
+    z-index: 1;
+    margin: 6rem auto 0 auto;
+    max-width: 670px;
+}
+.route__buttons {
+    display: flex;
+    button {
+        @include btn;
+        flex: 1 1 0;
+        padding: 2rem;
+        transition: all .5s ease;
+        img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            transition: all .5s ease;
+        }
+        &:hover, &:active {
+            img {
+                transform: scale(.9);
+            }
+        }
+        &.active {
+            background-color: $red;
+        }
+    }
+}
+.route__box {
+    background-image: linear-gradient(to bottom, $red, $purple);
+}
+.route__item {
+    padding: 4rem;
+
+}
+.route__item-title {
+    margin: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.route__item-text {
+    margin: 2rem 0 0 0;
+    p {
+        margin: 2rem 0 0 0;
+    }
+}
+.route__map {
+    margin: -8rem 0 0 0;
+    height: 47rem;
+    border: 1px solid #e8b73b;
+    border-radius: 1rem;
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 960px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .route__map {
+        margin: 2rem 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

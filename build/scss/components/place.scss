@@ -1,0 +1,50 @@
+.place {
+   @extend .section;
+   background-image: url(../img/mask-program.png);
+}
+.place__container {
+   @extend .container;
+}
+.place__title {
+   @extend .title;
+   &:before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 50%;
+       transform: translateX(-50%) skew(40deg);
+       z-index: 1;
+       width: 20vw;
+       height: 10rem;
+       background-image: linear-gradient(to bottom, $red, $yellow), linear-gradient(to bottom, $red, $purple);
+       background-position: 100% 0, 0 20%;
+       background-size: 1.5rem 100%, 1.5rem 50%;
+       background-repeat: no-repeat;
+   }
+   &:after {
+       content: '';
+       position: absolute;
+       bottom: -10%;
+       left: calc(50% + 12vw);
+       transform: skew(40deg);
+       z-index: -1;
+       width: 1.5rem;
+       height: 80%;
+       background-image: linear-gradient(to bottom, $red, $yellow);
+   }
+}
+.place__subtitle {
+    @extend .subtitle;
+}
+.place__text {
+    @extend .text;
+}
+.place__img {
+    margin: 4rem 0 0 0;
+    text-align: center;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
